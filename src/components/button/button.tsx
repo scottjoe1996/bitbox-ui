@@ -1,32 +1,19 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, h } from '@stencil/core';
 
+/**
+ * @slot Default - Slot for the content of the button
+ */
 @Component({
   tag: 'bit-button',
   styleUrl: 'button.css',
   shadow: true,
 })
 export class Button {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
-
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
-
-  /**
-   * The last name
-   */
-  @Prop() last: string;
-
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
-  }
-
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return (
+      <button>
+        <slot />
+      </button>
+    );
   }
 }
