@@ -2,11 +2,11 @@ import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: 'bit-button',
+  styleUrl: 'button.css',
   shadow: true,
 })
-export class MyComponent {
+export class Button {
   /**
    * The first name
    */

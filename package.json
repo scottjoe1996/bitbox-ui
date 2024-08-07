@@ -13,9 +13,9 @@
       "import": "./dist/bitbox-ui/bitbox-ui.esm.js",
       "require": "./dist/bitbox-ui/bitbox-ui.cjs.js"
     },
-    "./my-component": {
-      "import": "./dist/components/my-component.js",
-      "types": "./dist/components/my-component.d.ts"
+    "./button": {
+      "import": "./dist/components/button.js",
+      "types": "./dist/components/button.d.ts"
     },
     "./loader": {
       "import": "./loader/index.js",
