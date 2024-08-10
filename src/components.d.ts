@@ -9,6 +9,9 @@ import { ComponentSize } from "./global/props";
 export { ComponentSize } from "./global/props";
 export namespace Components {
     interface BitButton {
+        /**
+          * The size of the button
+         */
         "size": ComponentSize;
     }
 }
@@ -25,6 +28,9 @@ declare global {
 }
 declare namespace LocalJSX {
     interface BitButton {
+        /**
+          * The size of the button
+         */
         "size"?: ComponentSize;
     }
     interface IntrinsicElements {

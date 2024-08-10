@@ -11,6 +11,9 @@ import { ComponentSize } from '../../global/props';
   shadow: true,
 })
 export class Button {
+  /**
+    The size of the button
+ */
   @Prop() size: ComponentSize = 'medium';
 
   render() {
