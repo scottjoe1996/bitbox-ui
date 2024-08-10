@@ -10,10 +10,23 @@ button {
   background-color: transparent;
   color: var(--bit-color-primary);
   font-family: var(--bit-font-family);
-  font-size: 1rem;
   font-weight: 600;
   line-height: normal;
-  padding: 16px 24px;
   text-align: center;
   text-decoration: none;
+}
+
+.small {
+  font-size: 0.875rem;
+  padding: 12px 20px;
+}
+
+.medium {
+  font-size: 1rem;
+  padding: 16px 24px;
+}
+
+.large {
+  font-size: 1.125rem;
+  padding: 20px 28px;
 }

@@ -5,8 +5,11 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { ComponentSize } from "./global/props";
+export { ComponentSize } from "./global/props";
 export namespace Components {
     interface BitButton {
+        "size": ComponentSize;
     }
 }
 declare global {
@@ -22,6 +25,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface BitButton {
+        "size"?: ComponentSize;
     }
     interface IntrinsicElements {
         "bit-button": BitButton;
