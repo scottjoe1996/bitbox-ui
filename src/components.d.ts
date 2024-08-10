@@ -15,8 +15,23 @@ export namespace Components {
         "size": ComponentSize;
     }
 }
+export interface BitButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBitButtonElement;
+}
 declare global {
+    interface HTMLBitButtonElementEventMap {
+        "click": MouseEvent;
+    }
     interface HTMLBitButtonElement extends Components.BitButton, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBitButtonElementEventMap>(type: K, listener: (this: HTMLBitButtonElement, ev: BitButtonCustomEvent<HTMLBitButtonElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBitButtonElementEventMap>(type: K, listener: (this: HTMLBitButtonElement, ev: BitButtonCustomEvent<HTMLBitButtonElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLBitButtonElement: {
         prototype: HTMLBitButtonElement;
@@ -28,6 +43,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface BitButton {
+        /**
+          * Event fired when button is clicked
+         */
+        "onClick"?: (event: BitButtonCustomEvent<MouseEvent>) => void;
         /**
           * The size of the button
          */

@@ -24,6 +24,11 @@ button:hover {
   transform: translateY(-2px);
 }
 
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
 .small {
   font-size: 0.875rem;
   padding: 12px 20px;

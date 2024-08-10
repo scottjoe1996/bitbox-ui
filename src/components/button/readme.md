@@ -10,6 +10,13 @@
 | `size`   | `size`    | The size of the button | `"large" \| "medium" \| "small"` | `'medium'` |
 
 
+## Events
+
+| Event   | Description                        | Type                      |
+| ------- | ---------------------------------- | ------------------------- |
+| `click` | Event fired when button is clicked | `CustomEvent<MouseEvent>` |
+
+
 ## Slots
 
 | Slot        | Description                        |
