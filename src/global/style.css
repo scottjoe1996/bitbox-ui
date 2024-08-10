@@ -1,0 +1,17 @@
+:root {
+  /**
+   * @prop --bit-color-primary: Primary color used in components
+   * @prop --bit-font-family: Default font-family used in components
+   */
+  --bit-color-primary: #1a1a1a;
+  --bit-font-family: 'Roboto';
+
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
