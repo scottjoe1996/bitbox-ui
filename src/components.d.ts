@@ -14,6 +14,10 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * If true, the button's width will be that of it's container
+         */
+        "fullWidth": boolean;
+        /**
           * The size of the button
          */
         "size": ComponentSize;
@@ -51,6 +55,10 @@ declare namespace LocalJSX {
           * If true, the button is disabled and can not longer fire the click event
          */
         "disabled"?: boolean;
+        /**
+          * If true, the button's width will be that of it's container
+         */
+        "fullWidth"?: boolean;
         /**
           * Event fired when button is clicked
          */

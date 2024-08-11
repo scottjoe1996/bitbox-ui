@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
 
 import { ComponentSize } from '../../global/props';
 
@@ -22,6 +22,11 @@ export class Button {
   @Prop() disabled = false;
 
   /**
+   * If true, the button's width will be that of it's container
+   */
+  @Prop() fullWidth = false;
+
+  /**
    * Event fired when button is clicked
    */
   @Event() click: EventEmitter<MouseEvent>;
@@ -36,10 +41,18 @@ export class Button {
   };
 
   render() {
+    const hostClasses: string[] = [];
+
+    if (this.fullWidth) {
+      hostClasses.push('full-width');
+    }
+
     return (
-      <button class={this.size} onClick={this.handleClick} disabled={this.disabled}>
-        <slot />
-      </button>
+      <Host class={hostClasses.join(' ')}>
+        <button class={this.size} onClick={this.handleClick} disabled={this.disabled}>
+          <slot />
+        </button>
+      </Host>
     );
   }
 }
