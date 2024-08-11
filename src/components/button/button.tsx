@@ -17,18 +17,27 @@ export class Button {
   @Prop() size: ComponentSize = 'medium';
 
   /**
+   * If true, the button is disabled and can not longer fire the click event
+   */
+  @Prop() disabled = false;
+
+  /**
    * Event fired when button is clicked
    */
   @Event() click: EventEmitter<MouseEvent>;
 
   handleClick = (event: MouseEvent) => {
     event.stopImmediatePropagation();
+
+    if (this.disabled) {
+      return;
+    }
     this.click.emit(event);
   };
 
   render() {
     return (
-      <button class={this.size.toString()} onClick={this.handleClick}>
+      <button class={this.size} onClick={this.handleClick} disabled={this.disabled}>
         <slot />
       </button>
     );

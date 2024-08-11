@@ -10,6 +10,10 @@ export { ComponentSize } from "./global/props";
 export namespace Components {
     interface BitButton {
         /**
+          * If true, the button is disabled and can not longer fire the click event
+         */
+        "disabled": boolean;
+        /**
           * The size of the button
          */
         "size": ComponentSize;
@@ -43,6 +47,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface BitButton {
+        /**
+          * If true, the button is disabled and can not longer fire the click event
+         */
+        "disabled"?: boolean;
         /**
           * Event fired when button is clicked
          */
