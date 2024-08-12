@@ -6,7 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { ComponentSize } from "./global/props";
+import { ButtonVariant } from "./components/button/button";
 export { ComponentSize } from "./global/props";
+export { ButtonVariant } from "./components/button/button";
 export namespace Components {
     interface BitButton {
         /**
@@ -21,6 +23,10 @@ export namespace Components {
           * The size of the button
          */
         "size": ComponentSize;
+        /**
+          * The style of the button
+         */
+        "variant": ButtonVariant;
     }
 }
 export interface BitButtonCustomEvent<T> extends CustomEvent<T> {
@@ -67,6 +73,10 @@ declare namespace LocalJSX {
           * The size of the button
          */
         "size"?: ComponentSize;
+        /**
+          * The style of the button
+         */
+        "variant"?: ButtonVariant;
     }
     interface IntrinsicElements {
         "bit-button": BitButton;

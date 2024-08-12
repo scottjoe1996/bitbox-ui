@@ -7,11 +7,9 @@
 }
 
 button {
+  border-radius: 4px;
   border: 2px solid var(--bit-color-primary);
-  border-radius: 12px;
   box-sizing: border-box;
-  background-color: transparent;
-  color: var(--bit-color-primary);
   font-family: var(--bit-font-family);
   font-weight: 600;
   line-height: normal;
@@ -24,7 +22,7 @@ button {
 button:hover:enabled {
   cursor: pointer;
   background-color: var(--bit-color-primary);
-  color: var(--bit-color-active);
+  color: var(--bit-color-contrast);
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 16px;
   transform: translateY(-2px);
 }
@@ -36,6 +34,16 @@ button:active:enabled {
 
 button:disabled {
   opacity: 0.3;
+}
+
+.outlined {
+  color: var(--bit-color-primary);
+  background-color: transparent;
+}
+
+.filled {
+  color: var(--bit-color-contrast);
+  background-color: var(--bit-color-primary);
 }
 
 .small {

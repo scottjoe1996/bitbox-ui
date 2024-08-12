@@ -1,11 +1,11 @@
 :root {
   /**
    * @prop --bit-color-primary: Primary color used in components
-   * @prop --bit-color-active: color used in components when they are active (e.g. on hover)
+   * @prop --bit-color-contrast: color used in components to contrast the primary color
    * @prop --bit-font-family: Default font-family used in components
    */
   --bit-color-primary: #1a1a1a;
-  --bit-color-active: #fff;
+  --bit-color-contrast: #fff;
   --bit-font-family: 'Roboto';
 
   font-size: 14px;

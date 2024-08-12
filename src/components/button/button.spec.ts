@@ -2,7 +2,7 @@ import { newSpecPage } from '@stencil/core/testing';
 import { Button } from './button';
 
 describe('bit-button', () => {
-  it('renders with medium size by default', async () => {
+  it('renders with medium size and outlined variant by default', async () => {
     const { root } = await newSpecPage({
       components: [Button],
       html: '<bit-button></bit-button>',
@@ -10,7 +10,7 @@ describe('bit-button', () => {
     expect(root).toEqualHtml(`
       <bit-button>
         <mock:shadow-root>
-          <button class="medium">
+          <button class="medium outlined">
             <slot></slot>
           </button>
         </mock:shadow-root>
@@ -26,7 +26,23 @@ describe('bit-button', () => {
     expect(root).toEqualHtml(`
       <bit-button size="small">
         <mock:shadow-root>
-          <button class="small">
+          <button class="small outlined">
+            <slot></slot>
+          </button>
+        </mock:shadow-root>
+      </bit-button>
+    `);
+  });
+
+  it('renders with specified variant', async () => {
+    const { root } = await newSpecPage({
+      components: [Button],
+      html: '<bit-button variant="filled"></bit-button>',
+    });
+    expect(root).toEqualHtml(`
+      <bit-button variant="filled">
+        <mock:shadow-root>
+          <button class="medium filled">
             <slot></slot>
           </button>
         </mock:shadow-root>
@@ -42,7 +58,7 @@ describe('bit-button', () => {
     expect(root).toEqualHtml(`
       <bit-button>
         <mock:shadow-root>
-          <button class="medium">
+          <button class="medium outlined">
             <slot></slot>
           </button>
         </mock:shadow-root>

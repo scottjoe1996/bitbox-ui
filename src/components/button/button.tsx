@@ -1,6 +1,9 @@
 import { Component, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
 
 import { ComponentSize } from '../../global/props';
+import { createClassString } from '../../utils/utils';
+
+export type ButtonVariant = 'outlined' | 'filled';
 
 /**
  * @slot Default - Slot for the content of the button
@@ -15,6 +18,11 @@ export class Button {
    * The size of the button
    */
   @Prop() size: ComponentSize = 'medium';
+
+  /**
+   * The style of the button
+   */
+  @Prop() variant: ButtonVariant = 'outlined';
 
   /**
    * If true, the button is disabled and can not longer fire the click event
@@ -42,14 +50,15 @@ export class Button {
 
   render() {
     const hostClasses: string[] = [];
+    const buttonClasses: string[] = [this.size, this.variant];
 
     if (this.fullWidth) {
       hostClasses.push('full-width');
     }
 
     return (
-      <Host class={hostClasses.join(' ')}>
-        <button class={this.size} onClick={this.handleClick} disabled={this.disabled}>
+      <Host class={createClassString(hostClasses)}>
+        <button class={createClassString(buttonClasses)} onClick={this.handleClick} disabled={this.disabled}>
           <slot />
         </button>
       </Host>
