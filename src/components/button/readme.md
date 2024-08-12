@@ -5,12 +5,12 @@
 
 ## Properties
 
-| Property    | Attribute    | Description                                                             | Type                             | Default      |
-| ----------- | ------------ | ----------------------------------------------------------------------- | -------------------------------- | ------------ |
-| `disabled`  | `disabled`   | If true, the button is disabled and can not longer fire the click event | `boolean`                        | `false`      |
-| `fullWidth` | `full-width` | If true, the button's width will be that of it's container              | `boolean`                        | `false`      |
-| `size`      | `size`       | The size of the button                                                  | `"large" \| "medium" \| "small"` | `'medium'`   |
-| `variant`   | `variant`    | The style of the button                                                 | `"filled" \| "outlined"`         | `'outlined'` |
+| Property    | Attribute    | Description                                                            | Type                             | Default      |
+| ----------- | ------------ | ---------------------------------------------------------------------- | -------------------------------- | ------------ |
+| `disabled`  | `disabled`   | If true, the button is disabled and can no longer fire the click event | `boolean`                        | `false`      |
+| `fullWidth` | `full-width` | If true, the button's width will be that of it's container             | `boolean`                        | `false`      |
+| `size`      | `size`       | The size of the button                                                 | `"large" \| "medium" \| "small"` | `'medium'`   |
+| `variant`   | `variant`    | The style of the button                                                | `"filled" \| "outlined"`         | `'outlined'` |
 
 
 ## Events

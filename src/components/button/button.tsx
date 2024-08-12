@@ -25,7 +25,7 @@ export class Button {
   @Prop() variant: ButtonVariant = 'outlined';
 
   /**
-   * If true, the button is disabled and can not longer fire the click event
+   * If true, the button is disabled and can no longer fire the click event
    */
   @Prop() disabled = false;
 

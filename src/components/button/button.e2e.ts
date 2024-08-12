@@ -33,12 +33,12 @@ describe('bit-button', () => {
 
     await page.setContent('<bit-button>Hello There!</bit-button>');
     const button = await page.find('bit-button');
-    const focusEventSpy = await page.spyOnEvent('click');
+    const clickEventSpy = await page.spyOnEvent('click');
 
     await button.click();
     await page.waitForChanges();
 
-    expect(focusEventSpy).toHaveReceivedEvent();
+    expect(clickEventSpy).toHaveReceivedEvent();
   });
 
   it('should not emit click event when clicked if disabled is "true"', async () => {
@@ -46,11 +46,11 @@ describe('bit-button', () => {
 
     await page.setContent('<bit-button disabled="true">Hello There!</bit-button>');
     const button = await page.find('bit-button');
-    const focusEventSpy = await page.spyOnEvent('click');
+    const clickEventSpy = await page.spyOnEvent('click');
 
     await button.click();
     await page.waitForChanges();
 
-    expect(focusEventSpy).not.toHaveReceivedEvent();
+    expect(clickEventSpy).not.toHaveReceivedEvent();
   });
 });

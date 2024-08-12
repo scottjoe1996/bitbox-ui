@@ -12,7 +12,7 @@ export { ButtonVariant } from "./components/button/button";
 export namespace Components {
     interface BitButton {
         /**
-          * If true, the button is disabled and can not longer fire the click event
+          * If true, the button is disabled and can no longer fire the click event
          */
         "disabled": boolean;
         /**
@@ -58,7 +58,7 @@ declare global {
 declare namespace LocalJSX {
     interface BitButton {
         /**
-          * If true, the button is disabled and can not longer fire the click event
+          * If true, the button is disabled and can no longer fire the click event
          */
         "disabled"?: boolean;
         /**
