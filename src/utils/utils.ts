@@ -1,3 +1,3 @@
-export function format(first: string, middle: string, last: string): string {
-  return (first || '') + (middle ? ` ${middle}` : '') + (last ? ` ${last}` : '');
-}
+export const createClassString = (classes: string[]): string => {
+  return classes.join(' ');
+};
