@@ -7,6 +7,13 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
+
+      copy: [
+        {
+          src: 'global/assets/fonts/*',
+          dest: 'assets/fonts',
+        },
+      ],
     },
     {
       type: 'dist-custom-elements',
@@ -18,11 +25,11 @@ export const config: Config = {
     },
     {
       type: 'www',
-      serviceWorker: null, // disable service workers
+      serviceWorker: null, // disable service workers,
       copy: [
         {
-          src: 'assets/**/*',
-          dest: 'build/assets',
+          src: 'global/assets/fonts/*',
+          dest: 'build/assets/fonts',
         },
       ],
     },
