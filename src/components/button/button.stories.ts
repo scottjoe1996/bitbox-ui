@@ -9,13 +9,14 @@ export default {
   argTypes: {
     size: {
       options: ['small', 'medium', 'large'],
-      control: 'select',
+      control: 'radio',
     },
     variant: {
       options: ['outlined', 'filled'],
-      control: 'select',
+      control: 'radio',
     },
   },
+  tags: ['autodocs'],
   decorators: [withActions],
 };
 
