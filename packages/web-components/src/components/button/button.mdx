@@ -1,0 +1,14 @@
+import { Canvas, Controls, Markdown, Meta, Story } from '@storybook/blocks';
+
+import ReadMe from './readme.md?raw';
+import * as Stories from './button.stories';
+
+<Meta of={Stories} />
+
+# Button
+
+A button is a call to action that allows users to interact with your web application.
+
+<Canvas of={Stories.Component} layout="centered" />
+
+<Markdown>{ReadMe}</Markdown>;

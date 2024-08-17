@@ -1,3 +1,5 @@
+import { html } from 'lit';
+
 import { withActions } from '@storybook/addon-actions/decorator';
 
 export default {
@@ -16,11 +18,10 @@ export default {
       control: 'radio',
     },
   },
-  tags: ['autodocs'],
   decorators: [withActions],
 };
 
-const Template = args => `<bit-button size="${args.size}" variant="${args.variant}" disabled="${args.disabled}" full-width="${args.fullWidth}">${args.content}</bit-button>`;
+const Template = args => html`<bit-button size="${args.size}" variant="${args.variant}" disabled="${args.disabled}" full-width="${args.fullWidth}">${args.content}</bit-button>`;
 
 export const Component = Template.bind({});
 Component.args = {
