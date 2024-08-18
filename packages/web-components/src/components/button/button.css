@@ -31,10 +31,14 @@ button {
 
 button:hover:enabled {
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 4px 8px;
+  transform: translateY(-2px);
+}
+
+button.filled:hover:enabled,
+button.outlined:hover:enabled {
   background-color: var(--bit-color-primary);
   color: var(--bit-color-contrast);
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 16px;
-  transform: translateY(-2px);
 }
 
 button:active:enabled {
@@ -54,6 +58,12 @@ button:disabled {
 .filled {
   color: var(--bit-color-contrast);
   background-color: var(--bit-color-primary);
+}
+
+.text {
+  color: var(--bit-color-primary);
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .small {

@@ -3,7 +3,7 @@ import { Component, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
 import { ComponentSize } from '../../global/props';
 import { createClassString } from '../../utils/utils';
 
-export type ButtonVariant = 'outlined' | 'filled';
+export type ButtonVariant = 'outlined' | 'filled' | 'text';
 
 /**
  * @slot Default - Slot for the content of the button

@@ -29,6 +29,7 @@ const Template = args => html`<bit-button size="${args.size}" variant="${args.va
 
 const EachVariantTemplate = () =>
   html` <div style="display: flex; justify-content: space-between; align-items: center; width: 500px">
+    <bit-button variant="text">Text</bit-button>
     <bit-button variant="outlined">Outlined</bit-button>
     <bit-button variant="filled">Filled</bit-button>
   </div>`;
