@@ -21,7 +21,17 @@ export default {
   decorators: [withActions],
 };
 
+const disableControlParameters = {
+  controls: { disable: true },
+};
+
 const Template = args => html`<bit-button size="${args.size}" variant="${args.variant}" disabled="${args.disabled}" full-width="${args.fullWidth}">${args.content}</bit-button>`;
+
+const EachVariantTemplate = () =>
+  html` <div style="display: flex; justify-content: space-between; align-items: center; width: 500px">
+    <bit-button variant="outlined">Outlined</bit-button>
+    <bit-button variant="filled">Filled</bit-button>
+  </div>`;
 
 export const Component = Template.bind({});
 Component.args = {
@@ -31,3 +41,6 @@ Component.args = {
   fullWidth: false,
   content: 'Button',
 };
+
+export const EachVariant = EachVariantTemplate.bind({});
+EachVariant.parameters = disableControlParameters;

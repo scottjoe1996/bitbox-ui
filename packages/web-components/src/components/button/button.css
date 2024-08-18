@@ -1,4 +1,10 @@
 :host {
+  /**
+   * @prop --bit-color-primary: Color used for the border, background and inner text of the button.
+   * @prop --bit-color-contrast: Color used for the inner text when button is active or using the "filled" variant
+   * @prop --bit-font-family: Font family used by the inner text
+   */
+
   display: inline-block;
 }
 
@@ -15,7 +21,11 @@ button {
   line-height: normal;
   text-align: center;
   text-decoration: none;
-  transition: color 0.2s, background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
   width: inherit;
 }
 

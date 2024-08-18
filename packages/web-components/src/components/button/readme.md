@@ -29,6 +29,15 @@
 | `"Default"` | Slot for the content of the button |
 
 
+## CSS Custom Properties
+
+| Name                   | Description                                                                       |
+| ---------------------- | --------------------------------------------------------------------------------- |
+| `--bit-color-contrast` | Color used for the inner text when button is active or using the "filled" variant |
+| `--bit-color-primary`  | Color used for the border, background and inner text of the button.               |
+| `--bit-font-family`    | Font family used by the inner text                                                |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
