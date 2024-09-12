@@ -1,0 +1,36 @@
+{
+  "name": "@bitbox-ui/react",
+  "version": "0.0.1",
+  "description": "bitbox-ui react components",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "directories": {
+    "lib": "src"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottjoe1996/bitbox-ui.git"
+  },
+  "scripts": {
+    "build": "npm run tsc",
+    "tsc": "tsc -p . --outDir ./dist"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@bitbox-ui/web": "*"
+  },
+  "devDependencies": {
+    "@stencil/react-output-target": "^0.7.1",
+    "@types/react": "^18.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.4"
+  }
+}

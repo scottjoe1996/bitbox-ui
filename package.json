@@ -7,6 +7,12 @@
     "url": "https://github.com/scottjoe1996/bitbox-ui"
   },
   "workspaces": [
-    "packages/web-components"
-  ]
+    "packages/web-components",
+    "packages/react-components"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.4.1",
+    "cross-env": "^7.0.3",
+    "lerna": "^8.1.8"
+  }
 }

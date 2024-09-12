@@ -1,4 +1,5 @@
 import { Config } from '@stencil/core';
+import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'bitbox-ui',
@@ -7,7 +8,6 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
-
       copy: [
         {
           src: 'global/assets/fonts/*',
@@ -23,6 +23,9 @@ export const config: Config = {
       customElementsExportBehavior: 'auto-define-custom-elements',
       externalRuntime: false,
     },
+    reactOutputTarget({
+      outDir: '../react-components/src/components/stencil-generated/',
+    }),
     {
       type: 'www',
       serviceWorker: null, // disable service workers,
