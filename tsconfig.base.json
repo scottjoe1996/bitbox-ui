@@ -13,6 +13,6 @@
     "jsx": "react",
     "jsxFactory": "h"
   },
-  "include": ["packages"],
+  "include": ["packages", "demos"],
   "exclude": ["node_modules"]
 }

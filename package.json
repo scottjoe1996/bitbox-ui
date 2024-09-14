@@ -8,7 +8,8 @@
   },
   "workspaces": [
     "packages/web-components",
-    "packages/react-components"
+    "packages/react-components",
+    "demos/react"
   ],
   "devDependencies": {
     "@types/node": "^22.4.1",
