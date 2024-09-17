@@ -4,7 +4,9 @@ import React from 'react';
 const App: React.FC = () => {
   return (
     <div>
-      <BitButton variant="outlined">Button</BitButton>
+      <BitButton variant="outlined" size="large">
+        Button
+      </BitButton>
     </div>
   );
 };

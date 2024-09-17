@@ -20,11 +20,9 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
-      customElementsExportBehavior: 'auto-define-custom-elements',
-      externalRuntime: false,
     },
     reactOutputTarget({
-      outDir: '../react-components/src/components/stencil-generated/',
+      outDir: '../react-components/src/components/',
     }),
     {
       type: 'www',

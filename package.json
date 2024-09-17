@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/scottjoe1996/bitbox-ui"
   },
+  "scripts": {
+    "build": "lerna run build"
+  },
   "workspaces": [
     "packages/web-components",
     "packages/react-components",
