@@ -1,6 +1,8 @@
 {
   "name": "@bitbox-ui/react-demo",
   "version": "0.0.1",
+  "private": true,
+  "exports": null,
   "description": "Project to test react wrapped bitbox components",
   "repository": {
     "type": "git",
