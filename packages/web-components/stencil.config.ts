@@ -20,6 +20,7 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
+      externalRuntime: false,
     },
     reactOutputTarget({
       outDir: '../react-components/src/components/',

@@ -13,7 +13,7 @@
       "import": "./dist/bitbox-ui/bitbox-ui.esm.js",
       "require": "./dist/bitbox-ui/bitbox-ui.cjs.js"
     },
-    "./components/*.js": {
+    "./dist/components/*.js": {
       "import": "./dist/components/*.js",
       "types": "./dist/components/*.d.ts"
     },
