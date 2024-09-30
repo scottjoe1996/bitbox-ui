@@ -45,20 +45,20 @@
     "build-storybook": "cross-env CACHE_DIR='../../node_modules/.cache' storybook build"
   },
   "devDependencies": {
-    "@stencil/core": "^4.20.0",
-    "@stencil/react-output-target": "^0.6.0",
-    "@storybook/addon-actions": "^8.2.9",
-    "@storybook/addon-essentials": "^8.2.9",
-    "@storybook/blocks": "^8.2.9",
-    "@storybook/web-components": "^8.2.9",
-    "@storybook/web-components-vite": "^8.2.9",
-    "@types/jest": "^29.5.12",
+    "@stencil/core": "^4.21.0",
+    "@stencil/react-output-target": "^0.7.1",
+    "@storybook/addon-actions": "^8.3.4",
+    "@storybook/addon-essentials": "^8.3.4",
+    "@storybook/blocks": "^8.3.4",
+    "@storybook/web-components": "^8.3.4",
+    "@storybook/web-components-vite": "^8.3.4",
+    "@types/jest": "^29.5.13",
     "jest": "^29.7.0",
     "jest-cli": "^29.7.0",
     "lit": "^3.2.0",
-    "puppeteer": "^23.0.2",
-    "storybook": "^8.2.9",
-    "vite": "^5.4.2"
+    "puppeteer": "^23.4.1",
+    "storybook": "^8.3.4",
+    "vite": "^5.4.8"
   },
   "license": "ISC"
 }
