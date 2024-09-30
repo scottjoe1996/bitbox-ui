@@ -21,6 +21,10 @@
       "import": "./dist/components/bit-button.js",
       "types": "./dist/components/bit-button.d.ts"
     },
+    "./style.css": {
+      "import": "./dist/bitbox-ui/bitbox-ui.css",
+      "require": "./dist/bitbox-ui/bitbox-ui.css"
+    },
     "./loader": {
       "import": "./loader/index.js",
       "require": "./loader/index.cjs",

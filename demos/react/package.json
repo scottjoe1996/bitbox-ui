@@ -13,7 +13,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@bitbox-ui/react": "*"
+    "@bitbox-ui/react": "*",
+    "@bitbox-ui/web": "*"
   },
   "devDependencies": {
     "@types/react": "^18.3.10",
