@@ -64,6 +64,10 @@ export class Button {
 
     const button = this.element.shadowRoot.querySelector('button');
     button.appendChild(ripple);
+
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
   };
 
   render() {
