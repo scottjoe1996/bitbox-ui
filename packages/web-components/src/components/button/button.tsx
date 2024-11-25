@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
 
 import { ComponentSize } from '../../global/props';
 import { createClassString } from '../../utils/utils';
@@ -39,13 +39,31 @@ export class Button {
    */
   @Event() click: EventEmitter<MouseEvent>;
 
+  @Element() element: HTMLElement;
+
   handleClick = (event: MouseEvent) => {
     event.stopImmediatePropagation();
 
     if (this.disabled) {
       return;
     }
+
+    this.createRippleEffect(event);
     this.click.emit(event);
+  };
+
+  createRippleEffect = (event: MouseEvent) => {
+    const ripple = document.createElement('span');
+    const diameter = Math.max(this.element.clientWidth, this.element.clientHeight);
+    const radius = diameter / 2;
+
+    ripple.style.width = ripple.style.height = `${diameter}px`;
+    ripple.style.left = `${event.clientX - (this.element.offsetLeft + radius)}px`;
+    ripple.style.top = `${event.clientY - (this.element.offsetTop + radius)}px`;
+    ripple.classList.add('ripple');
+
+    const button = this.element.shadowRoot.querySelector('button');
+    button.appendChild(ripple);
   };
 
   render() {
