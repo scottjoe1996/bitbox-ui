@@ -60,7 +60,7 @@ export class Button {
     ripple.style.width = ripple.style.height = `${diameter}px`;
     ripple.style.left = `${event.clientX - (this.element.offsetLeft + radius)}px`;
     ripple.style.top = `${event.clientY - (this.element.offsetTop + radius)}px`;
-    ripple.classList.add('ripple');
+    ripple.classList.add('ripple', `ripple-colour-${this.variant}`);
 
     const button = this.element.shadowRoot.querySelector('button');
     button.appendChild(ripple);

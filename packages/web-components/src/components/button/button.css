@@ -24,7 +24,7 @@ button {
   line-height: normal;
   text-align: center;
   text-decoration: none;
-  transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
+  transition: color 0.2s, background-color 0.2s, box-shadow 0.1s;
   width: inherit;
 }
 
@@ -83,8 +83,16 @@ button:disabled {
   border-radius: 50%;
   transform: scale(0);
   animation: ripple 0.6s linear;
-  background-color: var(--bit-color-primary);
   opacity: 0.4;
+}
+
+.ripple-colour-text {
+  background-color: var(--bit-color-primary);
+}
+
+.ripple-colour-outlined,
+.ripple-colour-filled {
+  background-color: var(--bit-color-contrast);
 }
 
 @keyframes ripple {

@@ -14,7 +14,7 @@ export default {
       control: 'radio',
     },
     variant: {
-      options: ['outlined', 'filled'],
+      options: ['outlined', 'filled', 'text'],
       control: 'radio',
     },
   },
