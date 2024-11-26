@@ -18,6 +18,7 @@ type BitButtonEvents = { onClick: EventName<BitButtonCustomEvent<MouseEvent>> };
 export const BitButton: StencilReactComponent<BitButtonElement, BitButtonEvents> = /*@__PURE__*/ createComponent<BitButtonElement, BitButtonEvents>({
     tagName: 'bit-button',
     elementClass: BitButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
     events: { onClick: 'click' } as BitButtonEvents,
     defineCustomElement: defineBitButton

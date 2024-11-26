@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@stencil/core": "^4.22.3",
-    "@stencil/react-output-target": "^0.7.1",
+    "@stencil/react-output-target": "^0.7.4",
     "@storybook/addon-actions": "^8.4.5",
     "@storybook/addon-essentials": "^8.4.5",
     "@storybook/blocks": "^8.4.5",
@@ -62,7 +62,7 @@
     "lit": "^3.2.1",
     "puppeteer": "^23.9.0",
     "storybook": "^8.4.5",
-    "vite": "^5.4.8"
+    "vite": "^6.0.0"
   },
   "license": "ISC"
 }

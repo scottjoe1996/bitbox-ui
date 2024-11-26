@@ -33,8 +33,8 @@
     "@bitbox-ui/web": "*"
   },
   "devDependencies": {
-    "@stencil/react-output-target": "^0.7.1",
-    "@types/react": "^18.3.10",
+    "@stencil/react-output-target": "^0.7.4",
+    "@types/react": "^18.3.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   }
