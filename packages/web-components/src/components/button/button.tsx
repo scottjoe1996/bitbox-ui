@@ -54,12 +54,14 @@ export class Button {
 
   createRippleEffect = (event: MouseEvent) => {
     const ripple = document.createElement('span');
-    const diameter = Math.max(this.element.clientWidth, this.element.clientHeight);
+    const diameter = this.element.clientHeight * 2;
     const radius = diameter / 2;
 
+    const buttonRectangle = this.element.getBoundingClientRect();
+
     ripple.style.width = ripple.style.height = `${diameter}px`;
-    ripple.style.left = `${event.clientX - (this.element.offsetLeft + radius)}px`;
-    ripple.style.top = `${event.clientY - (this.element.offsetTop + radius)}px`;
+    ripple.style.left = `${event.clientX - buttonRectangle.left - radius}px`;
+    ripple.style.top = `${event.clientY - buttonRectangle.top - radius}px`;
     ripple.classList.add('ripple', `ripple-colour-${this.variant}`);
 
     const button = this.element.shadowRoot.querySelector('button');
