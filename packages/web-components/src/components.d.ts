@@ -30,6 +30,8 @@ export namespace Components {
     }
     interface BitCard {
     }
+    interface BitCardTitle {
+    }
 }
 export interface BitButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -59,9 +61,16 @@ declare global {
         prototype: HTMLBitCardElement;
         new (): HTMLBitCardElement;
     };
+    interface HTMLBitCardTitleElement extends Components.BitCardTitle, HTMLStencilElement {
+    }
+    var HTMLBitCardTitleElement: {
+        prototype: HTMLBitCardTitleElement;
+        new (): HTMLBitCardTitleElement;
+    };
     interface HTMLElementTagNameMap {
         "bit-button": HTMLBitButtonElement;
         "bit-card": HTMLBitCardElement;
+        "bit-card-title": HTMLBitCardTitleElement;
     }
 }
 declare namespace LocalJSX {
@@ -89,9 +98,12 @@ declare namespace LocalJSX {
     }
     interface BitCard {
     }
+    interface BitCardTitle {
+    }
     interface IntrinsicElements {
         "bit-button": BitButton;
         "bit-card": BitCard;
+        "bit-card-title": BitCardTitle;
     }
 }
 export { LocalJSX as JSX };
@@ -100,6 +112,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "bit-button": LocalJSX.BitButton & JSXBase.HTMLAttributes<HTMLBitButtonElement>;
             "bit-card": LocalJSX.BitCard & JSXBase.HTMLAttributes<HTMLBitCardElement>;
+            "bit-card-title": LocalJSX.BitCardTitle & JSXBase.HTMLAttributes<HTMLBitCardTitleElement>;
         }
     }
 }
