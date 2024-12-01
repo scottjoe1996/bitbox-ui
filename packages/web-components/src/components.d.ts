@@ -31,6 +31,14 @@ export namespace Components {
     interface BitCard {
     }
     interface BitCardTitle {
+        /**
+          * The title of the card
+         */
+        "main": string;
+        /**
+          * The subtitle of the card
+         */
+        "subtitle"?: string;
     }
 }
 export interface BitButtonCustomEvent<T> extends CustomEvent<T> {
@@ -99,6 +107,14 @@ declare namespace LocalJSX {
     interface BitCard {
     }
     interface BitCardTitle {
+        /**
+          * The title of the card
+         */
+        "main"?: string;
+        /**
+          * The subtitle of the card
+         */
+        "subtitle"?: string;
     }
     interface IntrinsicElements {
         "bit-button": BitButton;

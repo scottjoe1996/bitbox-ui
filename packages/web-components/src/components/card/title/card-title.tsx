@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'bit-card-title',
@@ -6,11 +6,22 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class CardTitle {
+  /**
+   * The title of the card
+   */
+  @Prop() main: string;
+
+  /**
+   * The subtitle of the card
+   */
+  @Prop() subtitle?: string;
+
   render() {
     return (
       <Host>
         <div>
-          <slot></slot>
+          <p>{this.main}</p>
+          {this.subtitle && <p>{this.subtitle}</p>}
         </div>
       </Host>
     );
