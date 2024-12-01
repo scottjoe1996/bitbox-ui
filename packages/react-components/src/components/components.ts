@@ -9,6 +9,7 @@
 
 import { type BitButtonCustomEvent } from "@bitbox-ui/web";
 import { BitButton as BitButtonElement, defineCustomElement as defineBitButton } from "@bitbox-ui/web/dist/components/bit-button.js";
+import { BitCard as BitCardElement, defineCustomElement as defineBitCard } from "@bitbox-ui/web/dist/components/bit-card.js";
 import type { EventName, StencilReactComponent } from '@stencil/react-output-target/runtime';
 import { createComponent } from '@stencil/react-output-target/runtime';
 import React from 'react';
@@ -22,4 +23,15 @@ export const BitButton: StencilReactComponent<BitButtonElement, BitButtonEvents>
     react: React,
     events: { onClick: 'click' } as BitButtonEvents,
     defineCustomElement: defineBitButton
+});
+
+type BitCardEvents = NonNullable<unknown>;
+
+export const BitCard: StencilReactComponent<BitCardElement, BitCardEvents> = /*@__PURE__*/ createComponent<BitCardElement, BitCardEvents>({
+    tagName: 'bit-card',
+    elementClass: BitCardElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as BitCardEvents,
+    defineCustomElement: defineBitCard
 });
