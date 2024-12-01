@@ -9,8 +9,9 @@ export class Card {
   render() {
     return (
       <Host>
-        CARD STUB
-        <slot></slot>
+        <div>
+          <slot></slot>
+        </div>
       </Host>
     );
   }
