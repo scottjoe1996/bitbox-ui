@@ -10,6 +10,7 @@ describe('bit-card', () => {
     expect(page.root).toEqualHtml(`
       <bit-card>
         <mock:shadow-root>
+          CARD STUB
           <slot></slot>
         </mock:shadow-root>
       </bit-card>
