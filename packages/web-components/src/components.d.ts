@@ -42,6 +42,8 @@ export namespace Components {
          */
         "subtitle"?: string;
     }
+    interface BitTerminal {
+    }
 }
 export interface BitButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -83,11 +85,18 @@ declare global {
         prototype: HTMLBitCardTitleElement;
         new (): HTMLBitCardTitleElement;
     };
+    interface HTMLBitTerminalElement extends Components.BitTerminal, HTMLStencilElement {
+    }
+    var HTMLBitTerminalElement: {
+        prototype: HTMLBitTerminalElement;
+        new (): HTMLBitTerminalElement;
+    };
     interface HTMLElementTagNameMap {
         "bit-button": HTMLBitButtonElement;
         "bit-card": HTMLBitCardElement;
         "bit-card-content": HTMLBitCardContentElement;
         "bit-card-title": HTMLBitCardTitleElement;
+        "bit-terminal": HTMLBitTerminalElement;
     }
 }
 declare namespace LocalJSX {
@@ -127,11 +136,14 @@ declare namespace LocalJSX {
          */
         "subtitle"?: string;
     }
+    interface BitTerminal {
+    }
     interface IntrinsicElements {
         "bit-button": BitButton;
         "bit-card": BitCard;
         "bit-card-content": BitCardContent;
         "bit-card-title": BitCardTitle;
+        "bit-terminal": BitTerminal;
     }
 }
 export { LocalJSX as JSX };
@@ -142,6 +154,7 @@ declare module "@stencil/core" {
             "bit-card": LocalJSX.BitCard & JSXBase.HTMLAttributes<HTMLBitCardElement>;
             "bit-card-content": LocalJSX.BitCardContent & JSXBase.HTMLAttributes<HTMLBitCardContentElement>;
             "bit-card-title": LocalJSX.BitCardTitle & JSXBase.HTMLAttributes<HTMLBitCardTitleElement>;
+            "bit-terminal": LocalJSX.BitTerminal & JSXBase.HTMLAttributes<HTMLBitTerminalElement>;
         }
     }
 }
