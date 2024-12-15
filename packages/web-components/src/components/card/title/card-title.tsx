@@ -20,8 +20,8 @@ export class CardTitle {
     return (
       <Host>
         <div>
-          <p>{this.main}</p>
-          {this.subtitle && <p>{this.subtitle}</p>}
+          <p class="title">{this.main}</p>
+          {this.subtitle && <p class="subtitle">{this.subtitle}</p>}
         </div>
       </Host>
     );
