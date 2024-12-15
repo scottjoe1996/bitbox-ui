@@ -9,6 +9,7 @@
 
 import { type BitButtonCustomEvent } from "@bitbox-ui/web";
 import { BitButton as BitButtonElement, defineCustomElement as defineBitButton } from "@bitbox-ui/web/dist/components/bit-button.js";
+import { BitCardContent as BitCardContentElement, defineCustomElement as defineBitCardContent } from "@bitbox-ui/web/dist/components/bit-card-content.js";
 import { BitCardTitle as BitCardTitleElement, defineCustomElement as defineBitCardTitle } from "@bitbox-ui/web/dist/components/bit-card-title.js";
 import { BitCard as BitCardElement, defineCustomElement as defineBitCard } from "@bitbox-ui/web/dist/components/bit-card.js";
 import type { EventName, StencilReactComponent } from '@stencil/react-output-target/runtime';
@@ -35,6 +36,17 @@ export const BitCard: StencilReactComponent<BitCardElement, BitCardEvents> = /*@
     react: React,
     events: {} as BitCardEvents,
     defineCustomElement: defineBitCard
+});
+
+type BitCardContentEvents = NonNullable<unknown>;
+
+export const BitCardContent: StencilReactComponent<BitCardContentElement, BitCardContentEvents> = /*@__PURE__*/ createComponent<BitCardContentElement, BitCardContentEvents>({
+    tagName: 'bit-card-content',
+    elementClass: BitCardContentElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as BitCardContentEvents,
+    defineCustomElement: defineBitCardContent
 });
 
 type BitCardTitleEvents = NonNullable<unknown>;

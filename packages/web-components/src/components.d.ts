@@ -30,6 +30,8 @@ export namespace Components {
     }
     interface BitCard {
     }
+    interface BitCardContent {
+    }
     interface BitCardTitle {
         /**
           * The title of the card
@@ -69,6 +71,12 @@ declare global {
         prototype: HTMLBitCardElement;
         new (): HTMLBitCardElement;
     };
+    interface HTMLBitCardContentElement extends Components.BitCardContent, HTMLStencilElement {
+    }
+    var HTMLBitCardContentElement: {
+        prototype: HTMLBitCardContentElement;
+        new (): HTMLBitCardContentElement;
+    };
     interface HTMLBitCardTitleElement extends Components.BitCardTitle, HTMLStencilElement {
     }
     var HTMLBitCardTitleElement: {
@@ -78,6 +86,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "bit-button": HTMLBitButtonElement;
         "bit-card": HTMLBitCardElement;
+        "bit-card-content": HTMLBitCardContentElement;
         "bit-card-title": HTMLBitCardTitleElement;
     }
 }
@@ -106,6 +115,8 @@ declare namespace LocalJSX {
     }
     interface BitCard {
     }
+    interface BitCardContent {
+    }
     interface BitCardTitle {
         /**
           * The title of the card
@@ -119,6 +130,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "bit-button": BitButton;
         "bit-card": BitCard;
+        "bit-card-content": BitCardContent;
         "bit-card-title": BitCardTitle;
     }
 }
@@ -128,6 +140,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "bit-button": LocalJSX.BitButton & JSXBase.HTMLAttributes<HTMLBitButtonElement>;
             "bit-card": LocalJSX.BitCard & JSXBase.HTMLAttributes<HTMLBitCardElement>;
+            "bit-card-content": LocalJSX.BitCardContent & JSXBase.HTMLAttributes<HTMLBitCardContentElement>;
             "bit-card-title": LocalJSX.BitCardTitle & JSXBase.HTMLAttributes<HTMLBitCardTitleElement>;
         }
     }

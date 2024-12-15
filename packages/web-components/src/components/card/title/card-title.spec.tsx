@@ -11,8 +11,8 @@ describe('bit-card-title', () => {
       <bit-card-title main="title" subtitle="subtitle">
         <mock:shadow-root>
           <div>
-            <p>title</>
-            <p>subtitle</>
+            <p class="title">title</>
+            <p class="subtitle">subtitle</>
           </div>
         </mock:shadow-root>
       </bit-card-title>
@@ -28,7 +28,7 @@ describe('bit-card-title', () => {
       <bit-card-title main="title">
         <mock:shadow-root>
           <div>
-            <p>title</>
+            <p class="title">title</>
           </div>
         </mock:shadow-root>
       </bit-card-title>
